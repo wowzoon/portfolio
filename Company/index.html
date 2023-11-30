@@ -41,6 +41,7 @@
         .logo { font-size: 200px; }
         .navbar {background-color: #00CCBF; border: 0px; }
         .navbar a { color: white !important; }
+        .navbar img { position: fixed; top: 8px;}
 
         @media screen and (max-width: 768px){
             .col-sm-4 {
@@ -55,15 +56,16 @@
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
           <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <button type="button" class="navbar-toggle" data-toggle="collapse">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>                        
             </button>
             <a class="navbar-brand" href="#myPage">
-                <img src="img/top_logo.png" alt="로고이미지" width="200px">
+                <img src="img/top_logo.png" alt="로고이미지" width="100px">
             </a>
           </div>
+        
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#about" data-toggle="collapse" data-target=".navbar-collapse-in">교육센터소개</a></li>
@@ -73,6 +75,7 @@
               <li><a href="#roadmap" data-toggle="collapse" data-target=".navbar-collapse-in">오시는길</a></li>
             </ul>
           </div>
+        
         </div>
       </nav>
     <!-- Navigation.end ----------------------------------------------------------------------------------------------------->
@@ -96,7 +99,7 @@
     <div id="about" class="container-fluid">
         <div class="row">
             <div class="col-sm-8">
-                <h2 class="text-center">교육센터소개</h2>
+                <h2>교육센터소개</h2>
                 <h4>- 4차산업혁명을 준비하는 IT 전문인력 양성</h4>
                 <p>글로벌 아이티 인재개발원은 정부지원 IT 전문 교육기관입니다.</p>
             </div>            
@@ -104,8 +107,7 @@
                 <span class="glyphicon glyphicon-signal logo"></span>
             </div>
             <!-- 교육센터소개.end ---------------------------------------------------------------------------------------------------->
-        </div>
-        
+        </div>    
     </div>
     
     <!-- 교육센터비전 -------------------------------------------------------------------------------------------------------->
@@ -115,11 +117,11 @@
                 <span class="glyphicon glyphicon-globe logo"></span>
             </div>
             <div class="col-sm-8">               
-                <h2 class="text-center">교육센터비전</h2>
+                <h2>교육센터비전</h2>
                 <h4>- 4대 핵심요소 ( Core Value )를 갖춘 인재 양성</h4>
                 <p>
                     <ol>
-                        BEST
+                        <strong>BEST</strong>
                         <li>Believe : 풍부한 노하우의 IT교육 운영과 경험</li>
                         <li>Expert : 전문개발자 경력의 강사진 구성</li>
                         <li>Stavility : 다년간 축적된 교육노하우와 채용약정기업 보유</li>
@@ -157,7 +159,7 @@
             </div>
           </div>
           </div>
-      </div>
+    </div>
     <!-- 교육과정소개.end ---------------------------------------------------------------------------------------------------->
     
     <!-- 교육과정신청  ------------------------------------------------------------------------------------------------------->
@@ -175,23 +177,25 @@
                 </p>
             </div>
             <div class="col-sm-7">
-                <div class="col-sm-6 form-group">
+                <div class="row">
+                    <div class="col-sm-6 form-group">
                     <input class="form-control" name="name" placeholder="이름">
-                </div>
-                <div class="col-sm-6 form-group">
+                    </div>
+                    <div class="col-sm-6 form-group">
                     <input class="form-control" name="phone" placeholder="연락처">
-                </div>
-                <div class="col-sm-12 form-group">
-                    <select class="form-control" name="curriculum">
-                        <option value="">[과정선택]</option>
-                        <option value="국비지원무료과정">국비지원무료과정</option>
-                        <option value="단과과정">단과과정</option>
-                        <option value="차세대핵심인재양성사업">차세대핵심인재양성사업</option>
-                        <option value="디지철핵심실무인재양성사업">디지철핵심실무인재양성사업</option>
-                    </select>
-                </div>
+                    </div>
+                    <div class="col-sm-12 form-group">
+                        <select class="form-control" name="curriculumn">
+                            <option value=>[과정선택]</option>
+                            <option value="국비지원무료과정">국비지원무료과정</option>
+                            <option value="단과과정">단과과정</option>
+                            <option value="차세대핵심인재양성사업">차세대핵심인재양성사업</option>
+                            <option value="디지철핵심실무인재양성사업">디지철핵심실무인재양성사업</option>
+                        </select>
+                    </div>
+                </div>   
                 <textarea class="form-control form-group" name="question" placeholder="문의사항"></textarea>
-                <button class="btn btn-default pull-right form-group">등록</button>
+                <button class="btn btn-default pull-right">등록</button>
             </div>
         </div>
     </div>
