@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>글로벌아이티인재개발원</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
           // Add smooth scrolling to all links in navbar + footer link
@@ -32,8 +34,25 @@
               });
             } // End if
           });
-        })
-        </script>
+        });
+
+        $(window).on('scroll',function() {
+            console.log("window height "+$(window).height());   
+            console.log("window offset top "+$("#curriculumn").offset().top),
+            console.log("window height "+$("#curriculumn").height());  
+            console.log($(window).scrollTop()); 
+            if($(window).scrollTop()>$("#curriculumn").offset().top-$(window).height()+$("#curriculumn").height()){
+                $("#lbox").addClass("animate__animated").addClass("animate__fadeInLeft");
+            }
+            if($(window).scrollTop()>$("#curriculumn").offset().top-$(window).height()+$("#curriculumn").height()){
+                $("#tbox").addClass("animate__animated").addClass("animate__fadeInUp");
+            }
+            if($(window).scrollTop()>$("#curriculumn").offset().top-$(window).height()+$("#curriculumn").height()){
+                $("#rbox").addClass("animate__animated").addClass("animate__fadeInRight");
+            }
+        });
+
+    </script>
     <style>
         .jumbotron { background: #00CCBF; color: white; padding: 100px 25px; }
         .bg-gray { background: #f6f6f6;}
@@ -138,21 +157,21 @@
         <h2 class="text-center">교육과정</h2>
         <div class="row text-center">
           <div class="col-sm-4">
-            <div class="thumbnail">
+            <div class="thumbnail" id="lbox">
               <img src="img/java.jpg" alt="자바학과" width="100%">
               <p><strong>자바(JAV)학과</strong></p>
               <p>개강안내</p>
             </div>
           </div>
           <div class="col-sm-4">
-            <div class="thumbnail">
+            <div class="thumbnail" id="tbox">
               <img src="img/kdigital.jpg" alt="K-디지털학과" width="100%">
               <p><strong>K-디지털학과</strong></p>
               <p>개강안내</p>
             </div>
           </div>
           <div class="col-sm-4">
-            <div class="thumbnail">
+            <div class="thumbnail" id="rbox">
               <img src="img/network.jpg" alt="네트워크/보안학과" width="180%">
               <p><strong>네트워크/보안학과</strong></p>
               <p>개강안내</p>
